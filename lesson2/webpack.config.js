@@ -2,9 +2,11 @@
  * @Descripttion: 
  * @Author: Zhu Hai Hua
  * @Date: 2020-03-01 23:33:12
- * @LastEditTime: 2020-03-02 11:49:53
+ * @LastEditTime: 2020-03-02 13:07:54
  */
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -23,10 +25,25 @@ module.exports = {
           outputPath: 'images/'
         }
       }
+    },{
+      test: /\.css$/,
+      // css-loader会帮助梳理css文件之间的关系 并打包为一段css代码
+      // style-loader会将打包好的css挂载到页面上
+      // 多个loader之间的执行顺序是 从右到左 从下到上
+      // 如果要使用postcss-loader 需要额外配置 postcss.config.js
+      use:['style-loader', 'css-loader', 'postcss-loader']
     }]
   },
   output: {
-    path: path.resolve(__dirname, 'src/dist'),
-    filename: 'bundle.js'
-  }
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.[contentHash:8].js'
+  },
+  // HtmlWebpackPlugin插件会自动生成一个html模板 同时会自动引入打包好的js文件
+  // 并且可以指定模板 temlplate配置项
+  plugins: [
+    new HtmlWebpackPlugin({
+    template: 'src/index.html'
+    }),
+    new CleanWebpackPlugin()
+  ]
 }

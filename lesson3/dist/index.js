@@ -86,27 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/avatar.png":
-/*!************************!*\
-  !*** ./src/avatar.png ***!
-  \************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/avatar.png\");\n\n//# sourceURL=webpack:///./src/avatar.png?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _avatar_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./avatar.png */ \"./src/avatar.png\");\n/*\n * @Descripttion: \n * @Author: Zhu Hai Hua\n * @Date: 2020-03-01 23:31:53\n * @LastEditTime: 2020-03-02 00:04:46\n */\n\n// console.log(avatar)\n\n\n\nconst img = new Image()\nimg.src = _avatar_png__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\nconst dom = document.getElementById('root')\ndom.append(img)\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("/*\n * @Descripttion: \n * @Author: Zhu Hai Hua\n * @Date: 2020-03-02 13:50:45\n * @LastEditTime: 2020-03-02 13:54:02\n */\nalert('test')//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogQERlc2NyaXB0dGlvbjogXG4gKiBAQXV0aG9yOiBaaHUgSGFpIEh1YVxuICogQERhdGU6IDIwMjAtMDMtMDIgMTM6NTA6NDVcbiAqIEBMYXN0RWRpdFRpbWU6IDIwMjAtMDMtMDIgMTM6NTQ6MDJcbiAqL1xuYWxlcnQoJ3Rlc3QnKSJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.js\n");
 
 /***/ })
 
