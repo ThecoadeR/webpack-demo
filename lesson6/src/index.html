@@ -1,0 +1,22 @@
+<!--
+ * @Descripttion: 
+ * @Author: Zhu Hai Hua
+ * @Date: 2020-03-02 20:05:31
+ * @LastEditTime: 2020-03-02 20:39:30
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>webpack-demo-lesson6</title>
+</head>
+<body>
+  <p>webpack-demo-TreeShaking</p>
+  <p>TreeShaking 可以检测到没有使用的代码 并且打包到入口文件里</p>
+  <P>TreeShaking只支持ES Module引入的模块</P>
+  <p>mode === development的情况下 默认是没有tree shaking的 需要自己手动添加optimization开启</p>
+  <p>sideEffects这个配置可以标注哪些类型的文件不需要使用tree shaking 比如css文件的处理 防止打包出错</p>
+  <p>mode === production的情况下 自动开启tree shaking 只需要配置sideEffects</p>
+</body>
+</html>
