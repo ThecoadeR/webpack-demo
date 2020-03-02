@@ -1,0 +1,38 @@
+<!--
+ * @Descripttion: 
+ * @Author: Zhu Hai Hua
+ * @Date: 2020-03-02 16:11:38
+ * @LastEditTime: 2020-03-02 16:54:00
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>webpack-demo-lesson5</title>
+</head>
+<body>
+  <p>使用<code>Babel</code>处理es6语法</p>
+  <a href="https://babeljs.io/" target="_blank"><code>Babel文档</code></a>
+  <p><code>babel-loader</code>实际上是一个桥梁 并不做翻译功能 webpack和babel的通信桥梁</p>
+  <p><code>@babel/preset-env</code>才是真正的翻译器</p>
+  <p>引入<code>babel/polyfill</code> 通过这个包可以在低版本浏览器里注入一些低版本浏览器所缺失的代码</p>
+  <p>由于引入了polyfill代码体积会变的非常巨大 需要按需引入 可以做如下配置(新版本里需要安装core-js）</p>
+  <code>
+    module: {
+      rules: [
+        { test: /\.js$/, 
+          exclude: /node_modules/, 
+          loader: 'babel-loader',
+          options: {
+            presets: [['@babel/preset-env', {
+              useBuiltIns: 'usage', // 不添加所有的新特性 只添加用到了的特性 减少打包以后的代码体积
+              corejs: 3
+            }]]
+          }
+        }
+      ]
+    }
+  </code>
+</body>
+</html>
