@@ -2,9 +2,9 @@
  * @Descripttion: 
  * @Author: Zhu Hai Hua
  * @Date: 2020-03-02 20:02:00
- * @LastEditTime: 2020-03-02 20:19:29
+ * @LastEditTime: 2020-03-03 15:01:32
  */
-import { add, minus } from './math'
+import { add } from 'npm-test'
 
 const dom = document.createElement('p')
 const result = add(1, 2)
