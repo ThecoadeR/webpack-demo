@@ -2,7 +2,7 @@
  * @Descripttion: 
  * @Author: Zhu Hai Hua
  * @Date: 2020-03-01 23:22:05
- * @LastEditTime: 2020-03-03 21:18:30
+ * @LastEditTime: 2020-03-04 14:12:22
  -->
 ## webpack学习合集
 * ### lesson1 init项目以及基础配置
@@ -12,3 +12,4 @@
 * ### lesson5 使用Babel处理es6语法
 * ### lesson6 TreeShaking
 * ### lesson7 Code Splitting
+* ### lesson8 lazy loading
