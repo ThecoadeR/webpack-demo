@@ -2,7 +2,7 @@
  * @Descripttion: 
  * @Author: Zhu Hai Hua
  * @Date: 2020-03-01 23:22:05
- * @LastEditTime: 2020-03-04 21:22:13
+ * @LastEditTime: 2020-03-05 21:48:00
  -->
 ## webpack学习合集
 * ### lesson1 init项目以及基础配置
@@ -15,3 +15,4 @@
 * ### lesson8 lazy loading
 * ### lesson9 CSS代码分割
 * ### lesson10 Webpack和浏览器缓存(caching)
+* ### lesson11 使用webpack打包一个lib
