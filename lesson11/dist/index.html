@@ -2,7 +2,7 @@
  * @Descripttion: 注释
  * @Author: 朱海华
  * @Date: 2020-03-05 22:11:20
- * @LastEditTime: 2020-03-05 22:30:20
+ * @LastEditTime: 2020-03-05 22:45:22
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +15,9 @@
   <p>如何使用webpack打包一个库</p>
   <p>除去基础配置外 可以配置library和libraryTarget这两个参数 前者负责挂载库到全局 后者配置为<code>umd</code>则支持所有引入规范</p>
   <p>记得修改package.json里的main入口</p>
-<script type="text/javascript" src="library.js"></script>
+  <script type="text/javascript" src="library.js"></script>
 </body>
+<script>
+  console.log(library.math.add(1, 2))
+</script>
 </html>
