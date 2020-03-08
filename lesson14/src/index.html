@@ -1,0 +1,36 @@
+<!--
+ * @Descripttion: 注释
+ * @Author: 朱海华
+ * @Date: 2018-12-07 22:45:08
+ * @LastEditTime: 2020-03-08 21:27:43
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>webpack-lesson14-demo</title>
+</head>
+<body>
+	<div id='tips'>
+		<p>webpack性能优化</p>
+		<ul>
+			<li>可以通过优化loader的打包范围 即不重新打包node_modules里的文件 通过配置exclude: /node_modules/</li>
+			<li>plugin尽可能少用 同时保证plugin的可靠性</li>
+			<li>resolve参数合理配置 
+				<code>
+				reslove: {
+					extensions: ['.js', '.jsx']
+				}
+				</code>
+			</li>
+			<li>
+				通过配置DllPlugin提高打包速度 目的是让所有的第三方模块只打包一次 从而提高打包效率
+				1. 通过一个额外的webpack配置 webpack.dll.js 来打包所有引入的第三方模块 同时配置library 让打包好的文件对外暴露
+				2. 通过webpack.DllPlugin来生成一个manifest.json文件 让第三方模块生成映射关系
+				3. 在webpack.common.js里配置wepback.DllReferencePlugin 引入生成好的manifest.json文件
+			</li>
+		</ul>
+	</div>
+	<div id='root'></div>
+</body>
+</html>

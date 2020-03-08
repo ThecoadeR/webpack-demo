@@ -1,0 +1,31 @@
+<!--
+ * @Descripttion: 注释
+ * @Author: 朱海华
+ * @Date: 2018-12-07 22:45:08
+ * @LastEditTime: 2020-03-08 21:06:56
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>webpack-lesson14-demo</title>
+</head>
+<body>
+	<div id='tips'>
+		<p>webpack性能优化</p>
+		<ul>
+			<li>可以通过优化loader的打包范围 即不重新打包node_modules里的文件 通过配置exclude: /node_modules/</li>
+			<li>plugin尽可能少用 同时保证plugin的可靠性</li>
+			<li>resolve参数合理配置 
+				<code>
+				reslove: {
+					extensions: ['.js', '.jsx']
+				}
+				</code>
+			</li>
+			<li>通过配置DllPlugin提高打包速度</li>
+		</ul>
+	</div>
+	<div id='root'></div>
+<script type="text/javascript" src="vendors.dll.js"></script><script type="text/javascript" src="runtime.4f3f12f593141a0bf20c.js"></script><script type="text/javascript" src="main.3f8b244a1bbac963a572.js"></script></body>
+</html>
