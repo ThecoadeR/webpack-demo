@@ -2,7 +2,7 @@
  * @Descripttion: 注释
  * @Author: 朱海华
  * @Date: 2018-12-07 22:44:52
- * @LastEditTime: 2020-03-08 16:20:08
+ * @LastEditTime: 2020-03-08 17:29:10
  */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -16,6 +16,7 @@ module.exports = {
 		main: './src/index.js'
 	},
 	devServer: {
+		overlay: true,
 		contentBase: './dist',
 		open: true,
 		port: 8080,
@@ -30,7 +31,7 @@ module.exports = {
 		rules: [{ 
 			test: /\.js$/, 
 			exclude: /node_modules/, 
-			loader: 'babel-loader',
+			use: ['babel-loader', 'eslint-loader'],
 		}, {
 			test: /\.(jpg|png|gif)$/,
 			use: {
