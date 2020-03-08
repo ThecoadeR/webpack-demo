@@ -2,7 +2,7 @@
  * @Descripttion: 
  * @Author: Zhu Hai Hua
  * @Date: 2020-03-01 23:22:05
- * @LastEditTime: 2020-03-08 14:59:09
+ * @LastEditTime: 2020-03-08 16:28:56
  -->
 ## webpack学习合集
 * ### lesson1 init项目以及基础配置
@@ -17,3 +17,4 @@
 * ### lesson10 Webpack和浏览器缓存(caching)
 * ### lesson11 使用webpack打包一个lib
 * ### lesson12 使用webpack配置typescript
+* ### lesson13 使用devServer转发请求以及单页面路由配置
