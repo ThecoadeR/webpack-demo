@@ -2,9 +2,10 @@
  * @Descripttion: 注释
  * @Author: 朱海华
  * @Date: 2020-03-09 21:16:29
- * @LastEditTime: 2020-03-09 21:59:14
+ * @LastEditTime: 2020-03-09 22:24:52
  */
 const path = require('path')
+const { CopyRightWebpackPlugin } = require('./plugins/copyright-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -36,5 +37,10 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new CopyRightWebpackPlugin({
+      name: 'Zhu'
+    })
+  ]
 }
